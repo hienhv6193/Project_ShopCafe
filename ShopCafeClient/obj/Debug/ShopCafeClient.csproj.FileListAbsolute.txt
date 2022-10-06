@@ -1,0 +1,13 @@
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.csproj.AssemblyReference.cache
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.csproj.SuggestedBindingRedirects.cache
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.Properties.Resources.resources
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.csproj.GenerateResource.cache
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.csproj.CoreCompileInputs.cache
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\bin\Debug\ShopCafeClient.exe.config
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\bin\Debug\ShopCafeClient.exe
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\bin\Debug\ShopCafeClient.pdb
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.exe
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.pdb
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.Login.resources
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.Manager.resources
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.Admin.resources
