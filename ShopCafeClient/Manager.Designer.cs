@@ -32,10 +32,16 @@ namespace ShopCafeClient
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thứcĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bànĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.cbbCategory = new System.Windows.Forms.ComboBox();
@@ -43,7 +49,6 @@ namespace ShopCafeClient
             this.lsvBill = new System.Windows.Forms.ListView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -64,11 +69,49 @@ namespace ShopCafeClient
             // 
             // adminToolStripMenuItem
             // 
+            this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.doanhThuToolStripMenuItem,
+            this.thứcĂnToolStripMenuItem,
+            this.danhMụcToolStripMenuItem,
+            this.bànĂnToolStripMenuItem,
+            this.tàiKhoảnToolStripMenuItem});
             this.adminToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
             this.adminToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
             this.adminToolStripMenuItem.Text = "Admin";
-            this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
+            // 
+            // doanhThuToolStripMenuItem
+            // 
+            this.doanhThuToolStripMenuItem.Name = "doanhThuToolStripMenuItem";
+            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.doanhThuToolStripMenuItem.Text = "Doanh thu";
+            this.doanhThuToolStripMenuItem.Click += new System.EventHandler(this.doanhThuToolStripMenuItem_Click);
+            // 
+            // thứcĂnToolStripMenuItem
+            // 
+            this.thứcĂnToolStripMenuItem.Name = "thứcĂnToolStripMenuItem";
+            this.thứcĂnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thứcĂnToolStripMenuItem.Text = "Thức ăn";
+            // 
+            // danhMụcToolStripMenuItem
+            // 
+            this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
+            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.danhMụcToolStripMenuItem.Text = "Danh mục";
+            this.danhMụcToolStripMenuItem.Click += new System.EventHandler(this.danhMụcToolStripMenuItem_Click);
+            // 
+            // bànĂnToolStripMenuItem
+            // 
+            this.bànĂnToolStripMenuItem.Name = "bànĂnToolStripMenuItem";
+            this.bànĂnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bànĂnToolStripMenuItem.Text = "Bàn ăn";
+            // 
+            // tàiKhoảnToolStripMenuItem
+            // 
+            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
+            this.tàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem_Click);
             // 
             // thôngTinCáNhânToolStripMenuItem
             // 
@@ -105,6 +148,16 @@ namespace ShopCafeClient
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(530, 64);
             this.panel2.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(332, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 52);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Thêm món";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // numericUpDown1
             // 
@@ -172,16 +225,6 @@ namespace ShopCafeClient
             this.flowLayoutPanel1.Size = new System.Drawing.Size(687, 484);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(332, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 52);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Thêm món";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,5 +266,10 @@ namespace ShopCafeClient
         private NumericUpDown numericUpDown1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button button1;
+        private ToolStripMenuItem doanhThuToolStripMenuItem;
+        private ToolStripMenuItem thứcĂnToolStripMenuItem;
+        private ToolStripMenuItem danhMụcToolStripMenuItem;
+        private ToolStripMenuItem bànĂnToolStripMenuItem;
+        private ToolStripMenuItem tàiKhoảnToolStripMenuItem;
     }
 }

@@ -10,4 +10,6 @@ D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeCl
 D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.pdb
 D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.Login.resources
 D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.Manager.resources
-D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.Admin.resources
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.adminRevenue.resources
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.adminAccount.resources
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.adminCategory.resources

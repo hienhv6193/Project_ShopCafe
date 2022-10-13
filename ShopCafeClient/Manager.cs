@@ -28,10 +28,22 @@ namespace ShopCafeClient
             profile.ShowDialog();
         }
 
-        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
-            admin.ShowDialog();
+            adminRevenue revenue = new adminRevenue();
+            revenue.ShowDialog();
+        }
+
+        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            adminAccount adminAccount = new adminAccount();
+            adminAccount.ShowDialog();
+        }
+
+        private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            adminCategory adminCategory = new adminCategory();
+            adminCategory.ShowDialog();
         }
     }
 }

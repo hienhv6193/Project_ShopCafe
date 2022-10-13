@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ShopCafeClient
 {
-    public partial class Admin : Form
+    public partial class adminAccount : Form
     {
-        public Admin()
+        public adminAccount()
         {
             InitializeComponent();
         }

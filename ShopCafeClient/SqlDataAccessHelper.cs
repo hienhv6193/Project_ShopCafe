@@ -14,6 +14,8 @@ namespace Demo
         private static SqlDataAdapter myAdapter;
         private static SqlConnection conn;
 
+        private string connectionStr = "Data Source=DESKTOP-R4QBP5J;Initial Catalog=QuanLyQuanCaFe;Persist Security Info=True;User ID=sa";
+
         /// <constructor>
         /// Initialise Connection
         /// </constructor>
@@ -39,6 +41,36 @@ namespace Demo
         /// Select Query
         /// </method>
         /// 
+        public static DataTable ExecuteQuery(String query, object[] sqlParameter = null)
+        {
+            DataTable dataTable = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection())
+            {
+                connection.Open();
+
+                SqlCommand myCommand = new SqlCommand(query, connection);
+
+                if (sqlParameter != null)
+                {
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            myCommand.Parameters.AddWithValue(item, sqlParameter[i]);
+                            i++;
+                        }
+                    }
+                }
+
+                SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
+                myAdapter.Fill(dataTable);
+                connection.Close();
+            }
+            return dataTable;
+        }
         public static DataTable ExecuteSelectAllQuery(String _query)
         {
             SqlCommand myCommand = new SqlCommand();
@@ -66,6 +98,7 @@ namespace Demo
             }
             return dataTable;
         }
+        
         public static DataTable ExecuteSelectQuery(String _query, SqlParameter[] sqlParameter)
         {
             SqlCommand myCommand = new SqlCommand();
