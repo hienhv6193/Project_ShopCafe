@@ -1,9 +1,12 @@
 ﻿using ShopCafeClient;
+using ShopCafeClient.DAO;
 using ShopCafeClient.DTO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Security.Principal;
@@ -16,6 +19,7 @@ namespace ShopCafeClient
 {
     public partial class Login : Form
     {
+
         public Login()
         {
             InitializeComponent();
@@ -23,26 +27,31 @@ namespace ShopCafeClient
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string Username = txbUser.Text.Trim();
-            string Password = txbPass.Text.Trim();
-            if (CheckLogin(Username, Password))
+            Account account = new Account()
             {
+                Username = txbUser.Text,
+                Password = txbPass.Text
+            };
+
+            if (CheckLogin( account.Username, account.Password))
+            {
+                MessageBox.Show("Welcome to Cafe !!!!");
                 Manager manager = new Manager();
                 this.Hide();
                 manager.ShowDialog();
                 this.Show();
-                MessageBox.Show("Welcome to Cafe !!!!");
             }
             else
             {
-                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu! Xin vui lòng nhập lại");
+                MessageBox.Show("Đăng nhập thất bại", "Login Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         bool CheckLogin(string Username, string Password)
         {
-            return false;
+            return AccountDAO.Instance.CheckLogin(Username, Password);
         }
+
         private void btxExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -58,11 +67,15 @@ namespace ShopCafeClient
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Manager manager = new Manager();
+            Register register = new Register();
             this.Hide();
-            MessageBox.Show("Welcome to Cafe !!!!");
-            manager.ShowDialog();
+            register.ShowDialog();
             this.Show();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txbUser.Focus();
         }
     }
 }

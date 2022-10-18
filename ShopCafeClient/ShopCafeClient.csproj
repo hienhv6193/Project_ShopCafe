@@ -59,7 +59,9 @@
     <Compile Include="adminCategory.Designer.cs">
       <DependentUpon>adminCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUS\AccountBUS.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -87,6 +89,12 @@
     <Compile Include="adminRevenue.Designer.cs">
       <DependentUpon>adminRevenue.cs</DependentUpon>
     </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlDataAccessHelper.cs" />
     <EmbeddedResource Include="adminAccount.resx">
       <DependentUpon>adminAccount.cs</DependentUpon>
@@ -113,6 +121,9 @@
     <EmbeddedResource Include="adminRevenue.resx">
       <DependentUpon>adminRevenue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,8 +140,6 @@
   <ItemGroup>
     <None Include="Resources\cafe.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BUS\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

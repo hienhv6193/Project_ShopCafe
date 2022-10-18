@@ -8,7 +8,10 @@ namespace ShopCafeClient.DTO
 {
     public class Account
     {
+        public int id { get; set; }
         public String Username { get; set; }
         public String Password { get; set; }
+        public String DisplayName { get; set; }
+        public int type { get; set; }
     }
 }
