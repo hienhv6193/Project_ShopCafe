@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,8 +46,25 @@ namespace ShopCafeClient
                     txbID.Text = account.id.ToString();
                     txbUser.Text = account.Username;
                     txbDisplay.Text = account.DisplayName;
-                    txbType.Text = account.type.ToString();
+                    cbbType.Text = account.type.ToString();
                 }
+            }
+        }
+
+        private void dvcListAccount_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Account account = new Account()
+            {
+                type = int.Parse(cbbType.Text),
+            };
+            switch (account.type)
+            {
+                case 1:
+                    cbbType.Text = "Quản lý";
+                    break;
+                case 0:
+                    cbbType.Text = "Nhân viên";
+                    break;
             }
         }
 
@@ -57,12 +75,20 @@ namespace ShopCafeClient
                 id = 0,
                 Username = txbUser.Text.Trim(),
                 DisplayName = txbDisplay.Text.Trim(),
-                type = int.Parse(txbType.Text),
+                type = int.Parse(cbbType.Text),
             };
 
-
-
             bool result = new AccountBUS().AddNew(account);
+
+            switch (cbbType.Text)
+            {
+                case "Quản lý":
+                    account.type = 1;
+                    break;
+                case "Nhân viên":
+                    account.type = 0;
+                    break;
+            }
 
             if (result)
             {
@@ -81,14 +107,20 @@ namespace ShopCafeClient
             Account account = new Account()
             {
                 id = int.Parse(txbID.Text),
-                DisplayName = txbDisplay.Text.Trim(),
-                type = int.Parse(txbType.Text),
+                type = int.Parse(cbbType.Text),
             };
-
-
 
             bool result = new AccountBUS().Update(account);
 
+            switch (cbbType.Text)
+            {
+                case "Quản lý":
+                    account.type = 1;
+                    break;
+                case "Nhân viên":
+                    account.type = 0;
+                    break;
+            }
 
             if (result)
             {

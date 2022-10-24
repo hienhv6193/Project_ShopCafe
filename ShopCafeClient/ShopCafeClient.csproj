@@ -59,10 +59,22 @@
     <Compile Include="adminCategory.Designer.cs">
       <DependentUpon>adminCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminFood.Designer.cs">
+      <DependentUpon>adminFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\AccountBUS.cs" />
+    <Compile Include="BUS\CategoryFoodBUS.cs" />
+    <Compile Include="BUS\FoodBUS.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\CategoryFoodDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\FoodDAO.cs" />
     <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\CategoryFood.cs" />
+    <Compile Include="DTO\Food.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminCategory.resx">
       <DependentUpon>adminCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminFood.resx">
+      <DependentUpon>adminFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

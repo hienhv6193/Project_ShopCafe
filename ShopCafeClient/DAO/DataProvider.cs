@@ -55,5 +55,39 @@ namespace Cafee
             }
             return datatable;
         }
+
+        public bool ExecuteNonQurey(string query, object[] parameter = null)
+        {
+            bool result = false;
+            using (SqlConnection connection = new SqlConnection(strCon))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                try
+                {
+                    if (parameter != null)
+                    {
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
+                        {
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
+                        }
+                    }
+                    ;
+                    result = command.ExecuteNonQuery() > 0;
+                }
+                catch
+                {
+                    return false;
+                }
+                connection.Close();
+            }
+            return result;
+        }
     }
 }

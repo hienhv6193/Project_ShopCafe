@@ -145,9 +145,10 @@ namespace ShopCafeClient.DAO
             bool result = false;
             SqlConnection con = new SqlConnection(strCon);
             con.Open();
-            String strCom = "UPDATE dbo.Account SET DisplayName=@DisplayName,type=@type where id=@id";
+            String strCom = "UPDATE dbo.Account SET Username=@Username DisplayName=@DisplayName,type=@type where id=@id";
             SqlCommand com = new SqlCommand(strCom, con);
             com.Parameters.Add(new SqlParameter("@id", newAccount.id));
+            com.Parameters.Add(new SqlParameter("@Username", newAccount.Username));
             com.Parameters.Add(new SqlParameter("@DisplayName", newAccount.DisplayName));
             com.Parameters.Add(new SqlParameter("@type", newAccount.type));
 

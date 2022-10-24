@@ -16,5 +16,22 @@ namespace ShopCafeClient
         {
             InitializeComponent();
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đăng ký thành công!!!");
+        }
+
+        private void ckbHidePass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbHidePass.Checked)
+            {
+                txbPass.UseSystemPasswordChar = txbCheckPass.UseSystemPasswordChar = false;
+            }
+            if (!ckbHidePass.Checked)
+            {
+                txbPass.UseSystemPasswordChar = txbCheckPass.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

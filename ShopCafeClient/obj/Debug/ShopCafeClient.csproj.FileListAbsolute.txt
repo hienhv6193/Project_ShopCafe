@@ -14,3 +14,4 @@ D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeCl
 D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.adminAccount.resources
 D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.adminCategory.resources
 D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.Register.resources
+D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.adminFood.resources

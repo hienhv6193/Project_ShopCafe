@@ -77,5 +77,17 @@ namespace ShopCafeClient
         {
             txbUser.Focus();
         }
+
+        private void ckbShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbShowPass.Checked)
+            {
+                txbPass.UseSystemPasswordChar = false;
+            }
+            if (!ckbShowPass.Checked)
+            {
+                txbPass.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

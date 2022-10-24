@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopCafeClient.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,18 @@ namespace ShopCafeClient
             this.Close();
         }
 
+        //bool CheckType(Account account)
+        //{
+        //    if (account.type == 1)
+        //    {
+        //        doanhThuToolStripMenuItem.Enabled = thứcĂnToolStripMenuItem.Enabled = danhMụcToolStripMenuItem.Enabled = bànĂnToolStripMenuItem.Enabled = tàiKhoảnToolStripMenuItem.Enabled = false;
+        //    }
+        //}
+
+        private void Manager_Load(object sender, EventArgs e)
+        {
+            //CheckType();
+        }
         private void thôngTinCáNhânToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Profile profile = new Profile();
@@ -33,7 +46,11 @@ namespace ShopCafeClient
             adminRevenue revenue = new adminRevenue();
             revenue.ShowDialog();
         }
-
+        private void thứcĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            adminFood food = new adminFood();
+            food.ShowDialog();
+        }
         private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             adminAccount adminAccount = new adminAccount();

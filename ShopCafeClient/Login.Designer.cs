@@ -31,18 +31,21 @@ namespace ShopCafeClient
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.ckbShowPass = new System.Windows.Forms.CheckBox();
+            this.btxExit = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.btxExit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txbPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txbUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,25 +53,72 @@ namespace ShopCafeClient
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnRegister);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.btxExit);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(196, 10);
+            this.panel1.Location = new System.Drawing.Point(263, 10);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(518, 284);
+            this.panel1.Size = new System.Drawing.Size(518, 328);
             this.panel1.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnLogin);
+            this.panel4.Controls.Add(this.ckbShowPass);
+            this.panel4.Controls.Add(this.btxExit);
+            this.panel4.Controls.Add(this.btnRegister);
+            this.panel4.Location = new System.Drawing.Point(16, 219);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(491, 96);
+            this.panel4.TabIndex = 7;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Window;
+            this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(14, 44);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(124, 35);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // ckbShowPass
+            // 
+            this.ckbShowPass.AutoSize = true;
+            this.ckbShowPass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbShowPass.Location = new System.Drawing.Point(186, 11);
+            this.ckbShowPass.Name = "ckbShowPass";
+            this.ckbShowPass.Size = new System.Drawing.Size(182, 27);
+            this.ckbShowPass.TabIndex = 3;
+            this.ckbShowPass.Text = "Hiển thị mật khẩu";
+            this.ckbShowPass.UseVisualStyleBackColor = true;
+            this.ckbShowPass.CheckedChanged += new System.EventHandler(this.ckbShowPass_CheckedChanged);
+            // 
+            // btxExit
+            // 
+            this.btxExit.BackColor = System.Drawing.SystemColors.Window;
+            this.btxExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btxExit.Location = new System.Drawing.Point(380, 44);
+            this.btxExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btxExit.Name = "btxExit";
+            this.btxExit.Size = new System.Drawing.Size(94, 35);
+            this.btxExit.TabIndex = 6;
+            this.btxExit.Text = "Thoát";
+            this.btxExit.UseVisualStyleBackColor = false;
+            this.btxExit.Click += new System.EventHandler(this.btxExit_Click);
             // 
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(225, 226);
+            this.btnRegister.Location = new System.Drawing.Point(207, 44);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(101, 35);
-            this.btnRegister.TabIndex = 3;
+            this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "Đăng ký";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -78,24 +128,11 @@ namespace ShopCafeClient
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 21F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label3.Location = new System.Drawing.Point(172, 26);
+            this.label3.Location = new System.Drawing.Point(172, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 40);
             this.label3.TabIndex = 4;
             this.label3.Text = "Đăng nhập";
-            // 
-            // btxExit
-            // 
-            this.btxExit.BackColor = System.Drawing.SystemColors.Window;
-            this.btxExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btxExit.Location = new System.Drawing.Point(396, 226);
-            this.btxExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btxExit.Name = "btxExit";
-            this.btxExit.Size = new System.Drawing.Size(94, 35);
-            this.btxExit.TabIndex = 5;
-            this.btxExit.Text = "Thoát";
-            this.btxExit.UseVisualStyleBackColor = false;
-            this.btxExit.Click += new System.EventHandler(this.btxExit_Click);
             // 
             // panel3
             // 
@@ -115,7 +152,7 @@ namespace ShopCafeClient
             this.txbPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPass.Name = "txbPass";
             this.txbPass.Size = new System.Drawing.Size(288, 30);
-            this.txbPass.TabIndex = 1;
+            this.txbPass.TabIndex = 2;
             this.txbPass.UseSystemPasswordChar = true;
             // 
             // label2
@@ -127,19 +164,6 @@ namespace ShopCafeClient
             this.label2.Size = new System.Drawing.Size(119, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật khẩu:";
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.Window;
-            this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(30, 226);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(124, 35);
-            this.btnLogin.TabIndex = 2;
-            this.btnLogin.Text = "Đăng nhập";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel2
             // 
@@ -174,10 +198,10 @@ namespace ShopCafeClient
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ShopCafeClient.Properties.Resources.cafe;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 30);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 284);
+            this.pictureBox1.Size = new System.Drawing.Size(235, 282);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -186,7 +210,8 @@ namespace ShopCafeClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 317);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(790, 346);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -197,6 +222,8 @@ namespace ShopCafeClient
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -220,5 +247,7 @@ namespace ShopCafeClient
         private PictureBox pictureBox1;
         private TextBox txbUser;
         private Button btnRegister;
+        private Panel panel4;
+        private CheckBox ckbShowPass;
     }
 }
