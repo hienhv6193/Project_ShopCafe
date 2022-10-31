@@ -68,6 +68,18 @@
     <Compile Include="BUS\AccountBUS.cs" />
     <Compile Include="BUS\CategoryFoodBUS.cs" />
     <Compile Include="BUS\FoodBUS.cs" />
+    <Compile Include="changePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changePassword.Designer.cs">
+      <DependentUpon>changePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changeProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeProfile.Designer.cs">
+      <DependentUpon>changeProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\CategoryFoodDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
