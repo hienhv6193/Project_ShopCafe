@@ -16,5 +16,22 @@ namespace ShopCafeClient
         {
             InitializeComponent();
         }
+
+        private void btnchangepassword_Click(object sender, EventArgs e)
+        {
+
+            changePassword changepassword = new changePassword();
+            this.Hide();
+            changepassword.ShowDialog();
+            this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            changeProfile changeProfile = new changeProfile();
+            this.Hide();
+            changeProfile.ShowDialog();
+            this.Show();
+        }
     }
 }
