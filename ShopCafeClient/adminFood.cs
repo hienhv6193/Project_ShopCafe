@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ShopCafeClient
 {
@@ -27,25 +28,29 @@ namespace ShopCafeClient
         }
         private void LoadTVCategory()
         {
-            List<CategoryFood> foodCategorieList = CategoryFoodBUS.Instance.ListAllCategory();
-            cbbFood.DataSource = foodCategorieList;
+            lvFood.View = View.Details;
+            lvFood.SmallImageList = imgLarge;
+            List<CategoryFood> categories = CategoryFoodBUS.Instance.ListAllCategory();
+            cbbFood.DataSource = categories;
             cbbFood.DisplayMember = "name";
             cbbFood.ValueMember = "id";
 
-            List<CategoryFood> categories = CategoryFoodBUS.Instance.ListAllCategory();
             int count = 0;
             foreach (CategoryFood cate in categories)
             {
                 TreeNode node = new TreeNode();
                 node.Text = cate.name;
-                node.ImageIndex = count;
-                node.SelectedImageIndex = count;
-                List<CategoryFood> foodCateList = CategoryFoodBUS.Instance.GetCategporyByCategoryID(cate.id);
-                foreach (CategoryFood foodCate in foodCateList)
+                node.Tag = cate.id;
+                node.ImageKey = cate.image;
+
+                List<Food> foodList = FoodBUS.Instance.GetFoodByCategoryID(cate.id);
+                foreach (Food food in foodList)
                 {
                     TreeNode subNode = new TreeNode();
-                    subNode.Text = foodCate.name;
-                    subNode.Tag = foodCate.id;
+                    subNode.Text = food.name;
+                    subNode.ImageKey = food.image;
+                    subNode.SelectedImageKey = food.image;
+                    subNode.Tag = food.id;
                     node.Nodes.Add(subNode);
                 }
                 tvCategoryFood.Nodes.Add(node);
@@ -60,8 +65,8 @@ namespace ShopCafeClient
                 txbNameFood.Text = lvFood.SelectedItems[0].SubItems[2].Text;
                 int id = Int32.Parse(lvFood.SelectedItems[0].SubItems[3].Text);
                 idFood = id;
-                CategoryFood foodCategorie = CategoryFoodBUS.Instance.GetFoodCategoryByFood(id);
-                cbbFood.Text = foodCategorie.name;
+                Food food = FoodBUS.Instance.GetFoodCategoryByFood(id);
+                cbbFood.Text = food.name;
                 nudPrice.Text = lvFood.SelectedItems[0].SubItems[4].Text;
                 imageFood = lvFood.SelectedItems[0].SubItems[5].Text;
             }
@@ -97,6 +102,11 @@ namespace ShopCafeClient
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUploadImage_Click(object sender, EventArgs e)
         {
 
         }

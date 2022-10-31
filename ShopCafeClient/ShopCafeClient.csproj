@@ -155,6 +155,36 @@
   <ItemGroup>
     <None Include="Resources\cafe.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\7up.jpg" />
+    <Content Include="Resources\aquafina.jpg" />
+    <Content Include="Resources\cafe-da.jpg" />
+    <Content Include="Resources\cafe-den-da.jpg" />
+    <Content Include="Resources\cafe-sua-da.jpg" />
+    <Content Include="Resources\coca-cola.jpg" />
+    <Content Include="Resources\dasani.jpg" />
+    <Content Include="Resources\fanta-cam.jpg" />
+    <Content Include="Resources\fanta-nho.jpg" />
+    <Content Include="Resources\ko-do.jpg" />
+    <Content Include="Resources\lavie.png" />
+    <Content Include="Resources\mirinda-dame.jpg" />
+    <Content Include="Resources\pepsi-kocalo.jpg" />
+    <Content Include="Resources\pepsi.jpg" />
+    <Content Include="Resources\redbull.jpg" />
+    <Content Include="Resources\revive.jpg" />
+    <Content Include="Resources\snack-bap-ngot.jpg" />
+    <Content Include="Resources\snack-bo-luc-lac.jpg" />
+    <Content Include="Resources\snack-corn-socola.jpg" />
+    <Content Include="Resources\snack-khoai-tay-tayo-vi-tao-ngot.png" />
+    <Content Include="Resources\snack-khoai-tay-vi-bit-tet.jpg" />
+    <Content Include="Resources\snack-pho-mai.jpg" />
+    <Content Include="Resources\snack-phong-muc.jpg" />
+    <Content Include="Resources\snack-tom-cay.jpg" />
+    <Content Include="Resources\snack-vi-cua.jpg" />
+    <Content Include="Resources\spire.jpg" />
+    <Content Include="Resources\sting-do.jpg" />
+    <Content Include="Resources\traxanh-c2.jpg" />
+    <Content Include="Resources\vivant.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,7 +21,7 @@ namespace ShopCafeClient.DAO
         {
             get
             {
-                if (instance == null) instance = new FoodDAO();
+                if (instance == null) { instance = new FoodDAO(); }
                 return FoodDAO.instance;
             }
             private set { FoodDAO.instance = value; }
@@ -33,7 +33,7 @@ namespace ShopCafeClient.DAO
                 id = (int)row["id"],
                 name = row["name"].ToString(),
                 idCategory = (int)row["idCategory"],
-                price = (int)row["price"],
+                price = (float)row["price"],
                 image = (string)row["image"],
             };
             return food;
@@ -55,7 +55,7 @@ namespace ShopCafeClient.DAO
         public List<Food> GetFoodByCategoryID(int id)
         {
             List<Food> list = new List<Food>();
-            string query = string.Format("SELECT *  FROM dbo.Food where idCategory= " + id);
+            string query = string.Format("SELECT *  FROM dbo.Food where idCategory=@id", new object[] { id });
             DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow dataRow in dataTable.Rows)
@@ -64,6 +64,17 @@ namespace ShopCafeClient.DAO
                 list.Add(food);
             }
             return list;
+        }
+
+        public Food FoodCategoryByFood(int id)
+        {
+            Food foodCategory = null;
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from dbo.CategoryFood where id= @id", new object[] { id });
+            foreach (DataRow item in data.Rows)
+            {
+                foodCategory = newFood(item);
+            }
+            return foodCategory;
         }
 
         public bool AddFood(Food newFood)
