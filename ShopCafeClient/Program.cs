@@ -16,7 +16,7 @@ namespace ShopCafeClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new adminFood());
+            Application.Run(new Manager());
         }
     }
 }

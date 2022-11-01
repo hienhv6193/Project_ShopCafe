@@ -32,6 +32,11 @@ namespace ShopCafeClient
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            CategoryFood food = new CategoryFood()
+            {
+                id = 0,
+                name = txbCategoryName.Text,
+            };
         }
 
         private void Btn_Update_Click(object sender, EventArgs e)

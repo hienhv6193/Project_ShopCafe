@@ -30,6 +30,8 @@ namespace ShopCafeClient
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,13 +49,16 @@ namespace ShopCafeClient
             this.cbbCategory = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lsvBill = new System.Windows.Forms.ListView();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -64,7 +69,7 @@ namespace ShopCafeClient
             this.thôngTinCáNhânToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1266, 41);
+            this.menuStrip1.Size = new System.Drawing.Size(1334, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -76,42 +81,47 @@ namespace ShopCafeClient
             this.danhMụcToolStripMenuItem,
             this.bànĂnToolStripMenuItem,
             this.tàiKhoảnToolStripMenuItem});
-            this.adminToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 16.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(104, 37);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
             this.adminToolStripMenuItem.Text = "Admin";
             // 
             // doanhThuToolStripMenuItem
             // 
+            this.doanhThuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("doanhThuToolStripMenuItem.Image")));
             this.doanhThuToolStripMenuItem.Name = "doanhThuToolStripMenuItem";
-            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(224, 38);
+            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
             this.doanhThuToolStripMenuItem.Text = "Doanh thu";
             this.doanhThuToolStripMenuItem.Click += new System.EventHandler(this.doanhThuToolStripMenuItem_Click);
             // 
             // thứcĂnToolStripMenuItem
             // 
+            this.thứcĂnToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thứcĂnToolStripMenuItem.Image")));
             this.thứcĂnToolStripMenuItem.Name = "thứcĂnToolStripMenuItem";
-            this.thứcĂnToolStripMenuItem.Size = new System.Drawing.Size(224, 38);
+            this.thứcĂnToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
             this.thứcĂnToolStripMenuItem.Text = "Thức ăn";
             this.thứcĂnToolStripMenuItem.Click += new System.EventHandler(this.thứcĂnToolStripMenuItem_Click);
             // 
             // danhMụcToolStripMenuItem
             // 
+            this.danhMụcToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("danhMụcToolStripMenuItem.Image")));
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(224, 38);
+            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
             this.danhMụcToolStripMenuItem.Text = "Danh mục";
             this.danhMụcToolStripMenuItem.Click += new System.EventHandler(this.danhMụcToolStripMenuItem_Click);
             // 
             // bànĂnToolStripMenuItem
             // 
+            this.bànĂnToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("bànĂnToolStripMenuItem.Image")));
             this.bànĂnToolStripMenuItem.Name = "bànĂnToolStripMenuItem";
-            this.bànĂnToolStripMenuItem.Size = new System.Drawing.Size(224, 38);
+            this.bànĂnToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
             this.bànĂnToolStripMenuItem.Text = "Bàn ăn";
             // 
             // tàiKhoảnToolStripMenuItem
             // 
+            this.tàiKhoảnToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("tàiKhoảnToolStripMenuItem.Image")));
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 38);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             this.tàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem_Click);
             // 
@@ -120,22 +130,24 @@ namespace ShopCafeClient
             this.thôngTinCáNhânToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thôngTinCáNhânToolStripMenuItem1,
             this.đăngXuấtToolStripMenuItem});
-            this.thôngTinCáNhânToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 16.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thôngTinCáNhânToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
-            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(229, 37);
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(198, 29);
             this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân";
             // 
             // thôngTinCáNhânToolStripMenuItem1
             // 
+            this.thôngTinCáNhânToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("thôngTinCáNhânToolStripMenuItem1.Image")));
             this.thôngTinCáNhânToolStripMenuItem1.Name = "thôngTinCáNhânToolStripMenuItem1";
-            this.thôngTinCáNhânToolStripMenuItem1.Size = new System.Drawing.Size(304, 38);
+            this.thôngTinCáNhânToolStripMenuItem1.Size = new System.Drawing.Size(270, 30);
             this.thôngTinCáNhânToolStripMenuItem1.Text = "Thông tin cá nhân";
             this.thôngTinCáNhânToolStripMenuItem1.Click += new System.EventHandler(this.thôngTinCáNhânToolStripMenuItem1_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
+            this.đăngXuấtToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("đăngXuấtToolStripMenuItem.Image")));
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(304, 38);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(270, 30);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -211,14 +223,6 @@ namespace ShopCafeClient
             this.lsvBill.TabIndex = 0;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
             // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(705, 714);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(530, 52);
-            this.panel4.TabIndex = 4;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 62);
@@ -234,16 +238,40 @@ namespace ShopCafeClient
             this.panel1.Size = new System.Drawing.Size(527, 99);
             this.panel1.TabIndex = 6;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 641);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1334, 36);
+            this.statusStrip1.TabIndex = 7;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(235, 30);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1287, 629);
+            this.ClientSize = new System.Drawing.Size(1334, 677);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -251,12 +279,13 @@ namespace ShopCafeClient
             this.Name = "Manager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý cafe";
-            this.Load += new System.EventHandler(this.Manager_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,7 +303,6 @@ namespace ShopCafeClient
         private ComboBox cbbCategory;
         private Panel panel3;
         private ListView lsvBill;
-        private Panel panel4;
         private NumericUpDown numericUpDown1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button button1;
@@ -284,5 +312,8 @@ namespace ShopCafeClient
         private ToolStripMenuItem bànĂnToolStripMenuItem;
         private ToolStripMenuItem tàiKhoảnToolStripMenuItem;
         private Panel panel1;
+        private Timer timer1;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

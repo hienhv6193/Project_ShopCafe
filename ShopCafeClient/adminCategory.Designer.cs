@@ -38,8 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.txbCategoryName = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCategory)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -59,7 +59,7 @@
             // dgvListCategory
             // 
             this.dgvListCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListCategory.Location = new System.Drawing.Point(3, 3);
+            this.dgvListCategory.Location = new System.Drawing.Point(0, 3);
             this.dgvListCategory.Name = "dgvListCategory";
             this.dgvListCategory.RowHeadersWidth = 51;
             this.dgvListCategory.RowTemplate.Height = 24;
@@ -154,6 +154,15 @@
             this.panel2.Size = new System.Drawing.Size(364, 142);
             this.panel2.TabIndex = 11;
             // 
+            // txbCategoryName
+            // 
+            this.txbCategoryName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbCategoryName.Font = new System.Drawing.Font("Times New Roman", 16.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCategoryName.Location = new System.Drawing.Point(119, 73);
+            this.txbCategoryName.Name = "txbCategoryName";
+            this.txbCategoryName.Size = new System.Drawing.Size(227, 40);
+            this.txbCategoryName.TabIndex = 9;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btn_Add);
@@ -163,15 +172,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(364, 79);
             this.panel3.TabIndex = 12;
-            // 
-            // txbCategoryName
-            // 
-            this.txbCategoryName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbCategoryName.Font = new System.Drawing.Font("Times New Roman", 16.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCategoryName.Location = new System.Drawing.Point(119, 73);
-            this.txbCategoryName.Name = "txbCategoryName";
-            this.txbCategoryName.Size = new System.Drawing.Size(227, 40);
-            this.txbCategoryName.TabIndex = 9;
             // 
             // adminCategory
             // 
