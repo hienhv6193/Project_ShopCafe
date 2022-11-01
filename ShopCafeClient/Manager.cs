@@ -62,5 +62,10 @@ namespace ShopCafeClient
             adminCategory adminCategory = new adminCategory();
             adminCategory.ShowDialog();
         }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }

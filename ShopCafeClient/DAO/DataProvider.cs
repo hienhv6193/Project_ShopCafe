@@ -12,7 +12,7 @@ namespace Cafee
 {
     internal class DataProvider
     {
-        private String strCon = @"Data Source=DESKTOP-R4QBP5J;Initial Catalog=QuanLyQuanCaFe;Persist Security Info=True;User ID=sa";
+        private String strCon = @"Data Source=LAPTOP-0SK7S71J\QUYSQLSERVER;Initial Catalog=QuanLyQuanCaFe;User ID=sa;Password=1";
         private static DataProvider instance;
 
         public static DataProvider Instance

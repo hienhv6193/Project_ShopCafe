@@ -15,6 +15,25 @@ D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeCl
 D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.adminCategory.resources
 D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.Register.resources
 D:\N3CN22\PTPMUngDung\Project\ShopCafeClient\ShopCafeClient\obj\Debug\ShopCafeClient.adminFood.resources
+<<<<<<< HEAD
+D:\Project\Project_ShopCafe\ShopCafeClient\bin\Debug\ShopCafeClient.exe.config
+D:\Project\Project_ShopCafe\ShopCafeClient\bin\Debug\ShopCafeClient.exe
+D:\Project\Project_ShopCafe\ShopCafeClient\bin\Debug\ShopCafeClient.pdb
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.csproj.AssemblyReference.cache
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.csproj.SuggestedBindingRedirects.cache
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.adminAccount.resources
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.adminCategory.resources
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.adminFood.resources
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.Login.resources
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.Manager.resources
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.Properties.Resources.resources
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.adminRevenue.resources
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.Register.resources
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.csproj.GenerateResource.cache
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.csproj.CoreCompileInputs.cache
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.exe
+D:\Project\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.pdb
+=======
 C:\Users\ASUS\OneDrive\Desktop\coffee\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.csproj.AssemblyReference.cache
 C:\Users\ASUS\OneDrive\Desktop\coffee\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.csproj.SuggestedBindingRedirects.cache
 C:\Users\ASUS\OneDrive\Desktop\coffee\Project_ShopCafe\ShopCafeClient\obj\Debug\ShopCafeClient.adminAccount.resources
@@ -32,3 +51,4 @@ C:\Users\ASUS\OneDrive\Desktop\coffee\Project_ShopCafe\ShopCafeClient\obj\Debug\
 C:\Users\ASUS\OneDrive\Desktop\coffee\Project_ShopCafe\ShopCafeClient\bin\Debug\ShopCafeClient.exe.config
 C:\Users\ASUS\OneDrive\Desktop\coffee\Project_ShopCafe\ShopCafeClient\bin\Debug\ShopCafeClient.exe
 C:\Users\ASUS\OneDrive\Desktop\coffee\Project_ShopCafe\ShopCafeClient\bin\Debug\ShopCafeClient.pdb
+>>>>>>> d7f97e5aa0623045e8e83c29090ece642659943a
