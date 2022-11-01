@@ -51,7 +51,7 @@ namespace ShopCafeClient.DAO
         public CategoryFood FoodCategoryByFood(int id)
         {
             CategoryFood foodCategory = null;
-            string query = string.Format("SELECT *  FROM dbo.CategoryFood where id=" + id);
+            string query = string.Format("SELECT *  FROM dbo.CategoryFood where id=@id", new object[] { id });
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
@@ -62,7 +62,7 @@ namespace ShopCafeClient.DAO
         public List<CategoryFood> GetCategporyByCategoryID(int id)
         {
             List<CategoryFood> list = new List<CategoryFood>();
-            string query = string.Format("SELECT *  FROM dbo.CategoryFood where id=" + id);
+            string query = string.Format("SELECT *  FROM dbo.CategoryFood where id=@id", new object[] { id });
             DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow dataRow in dataTable.Rows)

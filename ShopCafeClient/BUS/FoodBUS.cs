@@ -35,6 +35,12 @@ namespace ShopCafeClient.BUS
             List<Food> foods = FoodDAO.Instance.GetFoodByCategoryID(id);
             return foods;
         }
+        public Food GetFoodCategoryByFood(int id)
+        {
+            Food foodCategory = FoodDAO.Instance.FoodCategoryByFood(id);
+            return foodCategory;
+        }
+
         public bool AddFood(Food newFood)
         {
             return FoodDAO.Instance.AddFood(newFood);
